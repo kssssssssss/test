@@ -1,0 +1,17 @@
+三要素
+curl -X POST \
+  http://101.227.180.198/credit/verifyThreeElements \
+  -H 'cache-control: no-cache' \
+  -H 'content-type: application/x-www-form-urlencoded' \
+  -H 'postman-token: 16f92d9c-f598-b2c0-72de-764ac1ca4903' \
+  -d 'name=%E9%AB%98%E6%B3%BD%E6%99%A8&phone=18800346521&idNo=320684199005134410&carrierType=M'
+
+长期证书
+curl --location --request POST 'http://101.227.180.198/uchpwebapi/api/v2/cert/apply' \
+--header 'Content-Type: application/json' \
+--data '{"sig": {"signature": "uucqVCjE7liDHpNEeY8VHDDwz0rE2pDTu6Xv00ILJMHaBVI+fnBQucqjY/KHjUQ9HmGSGhiSFkmldSHp+IAdCP0CPH4fZVcW9rAp/g76pEo5AV3uj5ZOuMwF1wLZ1UUqk4lzOUd6bVQDPCB61c6MJ/VeXO0yOxRFKIza35y1xxjvoxSbs0qRR9gd4Rxd3Wgt8QGbZ7cxy0Pg1vVAXRal+iPBv1MEs75eWjk1wib+HNXAHttPYxOaWdQ2ig5ilZU3XJXKltl5kerXpIgrIDJB96hvEYSxzyeG4r6hLnt2aAKkzP9Oq5rkQkiRxwz8sRzK0M4TkyL5ixQK1MasGnQDoQ==","sigAlg": "SHA256withRSA"},"req": {"commonName": "grt","certType": "个人移动证书_SHECA_SM2","paperType": "身份证","p10": "MIHZMIGAAgEAMB4xCzAJBgNVBAYTAkNOMQ8wDQYDVQQDDAbprY/mgZIwWTATBgcqhkjOPQIBBggqgRzPVQGCLQNCAAQaEwi7Bpwgn595MP8f/v4RQ2Wvgl9oe1vxFo3TtwJbylMgizCMEih8STtD7q/pygnEylr/Rjfl1r9ILa6L2d1OoAAwCgYIKoEcz1UBg3UDSAAwRQIhANzUwo8yy/BKKQaMG34GHhq6Po00ZwIAf1OPSBJA6d09AiAQ9UQPZuiXz0wGaexn8cz6oFd9D5wjOP3EOze9cQpm8g==","extensions": [{"oid": "1.2.156.112570.12.101","value": "A71CEEC130554E1F9DFAF2857CC42651"},{"oid": "1.2.156.112570.12.102","value": "86F4BB5C9DBB44A08937E7114DE7B619"}],"paperNO": "123456789012345678","raNumber": 20160418,"validity": 3}}'
+
+事件证书
+curl --location --request POST 'http://101.227.180.198/expresscertservice/expresscertservice.svc/apply' \
+--header 'Content-Type: text/plain' \
+--data 'RANumber=9031&CertType=%E4%BA%8B%E4%BB%B6%E8%AF%81%E4%B9%A6RSA&Validity=1440&CountryName=CN&P10=MIIC8jCCAdoCAQAwga4xCzAJBgNVBAYTAkNOMSowKAYDVQQLDCHkuIrmtbfluILmlbDlrZfor4HkuaborqTor4HkuK3lv4MxKjAoBgNVBAoMIeS4iua1t%2BW4guaVsOWtl%2BivgeS5puiupOivgeS4reW%2FgzEPMA0GA1UEBwwG5LiK5rW3MRIwEAYDVQQIDAnkuIrmtbfluIIxIjAgBgNVBAMTGVNIRUNBIEV2ZW50IGZvciBBQVRMIFRlc3QwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQC%2BNafJw3x6pw8R9XMn32Gtgv0rNfzNygCNmBlQ3g5N75mVu2hMIiNetFLUUBdYpCwayowRoDhEK35YQPiDLMl2GcssRjPdeACiSkDbosc8BximqhR7UP7ElNmUGOi%2FNTzd%2FbcJKBd%2Ft6rCsgZDbt5fjc2wDHiakn9rDtQ8m8AoImJwrhzVOgvZdPQ4gkyTa54vO%2BeoJdF18wgY%2F%2Fn4ELoaC%2BHO8m%2FFsGycaZ%2FYAoO8faWVrKLf3lC774rzlLyYpLMAlLdF5PZwUoAV%2BBLTlr9UWAlujrbmVs4vj8qsBpRMcVJFDX%2Bsw6J9y%2FKXPfJ%2FWODKywjCghpDzPVomRvb22T1AgMBAAEwDQYJKoZIhvcNAQELBQADggEBAHdJRZN5O%2BcjD7pd%2B1QB8r5CqsvPlktlum6y4M5zoQ3CWNSiE7YoazjA6M%2B7PZKzTANs3ladqGnHJyUeZmvxs7mpcxOGHgSUOENfB%2FZMMxK%2B9bWetb7usVpk9e52sB5rEt66TzvpS9gDyNIo8PBa7bXlVm%2FUYsoF2fOJdjXjkd0yxFAGV3%2FBaiMdwNuQdg8RXI5B1UdYSHCiAeB7mpCaN4ApqQTRxr5T2tRkKhFJ6BMIn60jdxWy2Kxsaw3DMCyj4%2BwfcLsOQYYJGpCXQF72alxcfH7V2JqL1%2FIcKNinRwCVGsXiE2SulSx6IIgIPqKqSsoCkP69Cy%2BGBBTBnBSxKSI%3D&SignatureAlgorithm=SHA1withRSA&SignatureValue=hUUvWLDhEyeIXU2h%2F5hxRURf%2BKRWnsgK8amToJe22duGw%2FX9YVOqhzbS%2FwaRiIIf7RUB381pin6a8mImIfqm%2F6jexoXEJRYHy3xxwx01IgYnvyh7%2FoCitTAo2n1UPSobIjvle4624ZEQdg3HzbYIA47uiMy%2BeQSe3Iwz87KOm7oKkHjm0tsoTrPTv%2BDifhZHqM4xE8Q9DP6u2cby2hoTUdXv%2Ba%2FnYGr4UaLwXJymcn%2FoJL7mJXBNOYWgYmgala6MlXNVyCvsgr%2Ba6Cm2SbIdvoju6JmSaOLbf3cJBAxROsMzjYUskS7VDQmcJ7AZjnRC%2FvajnWPmtS1aEslZ65AR3g%3D%3D'
